@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{89E8AE97-E41B-4995-A214-A5FE19814A92}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A5D2C7A0-6C6D-4FD9-B114-4A14179C58D2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Base", "Core\Base\Base.csproj", "{2976B944-DF1A-41E3-8FB2-347C4AA60CFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0801A74C-FF26-40C7-A889-7F7A9B8D3E18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Core", "Infrastructure.Core\Infrastructure.Core.csproj", "{6723392E-0C83-4628-9481-A4B89C6CAB03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2976B944-DF1A-41E3-8FB2-347C4AA60CFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2976B944-DF1A-41E3-8FB2-347C4AA60CFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2976B944-DF1A-41E3-8FB2-347C4AA60CFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2976B944-DF1A-41E3-8FB2-347C4AA60CFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6723392E-0C83-4628-9481-A4B89C6CAB03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6723392E-0C83-4628-9481-A4B89C6CAB03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6723392E-0C83-4628-9481-A4B89C6CAB03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6723392E-0C83-4628-9481-A4B89C6CAB03}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2976B944-DF1A-41E3-8FB2-347C4AA60CFE} = {A5D2C7A0-6C6D-4FD9-B114-4A14179C58D2}
+		{6723392E-0C83-4628-9481-A4B89C6CAB03} = {0801A74C-FF26-40C7-A889-7F7A9B8D3E18}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03D6346B-C1A7-4456-8353-E99D4F8B06B4}
+	EndGlobalSection
+EndGlobal
