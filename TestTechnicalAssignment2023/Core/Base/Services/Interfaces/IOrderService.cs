@@ -7,11 +7,11 @@ namespace Base.Services.Interfaces
     public interface IOrderService
     {
         Task<int> CreateOrderAsync(
-            int customerId,
+            int? customerId,
             byte orderStatus,
             DateTime orderDate,
             DateTime requiredDate,
-            DateTime shippedDate,
+            DateTime? shippedDate,
             int storeId,
             int staffId);
         Task<OrderDto?> GetOrderByIdAsync(int id);

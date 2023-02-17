@@ -6,11 +6,11 @@ namespace Base.Repositories.Interfaces
     public interface IOrderRepository
     {
         Task<int> CreateOrderAsync(
-            int customerId,
+            int? customerId,
             byte orderStatus,
             DateTime orderDate,
             DateTime requiredDate,
-            DateTime shippedDate,
+            DateTime? shippedDate,
             int storeId,
             int staffId);
         Task<Order?> GetOrderByIdAsync(int id);

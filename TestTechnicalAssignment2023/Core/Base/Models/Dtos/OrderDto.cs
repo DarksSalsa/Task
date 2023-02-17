@@ -6,20 +6,20 @@ namespace Base.Models.Dtos
     {
         public int OrderId { get; set; }
 
-        public short OrderStatus { get; set; }
+        public byte OrderStatus { get; set; }
 
-        public DateOnly OrderDate { get; set; }
+        public DateTime OrderDate { get; set; }
 
-        public DateOnly RequiredDate { get; set; }
+        public DateTime RequiredDate { get; set; }
 
-        public DateOnly? ShippedDate { get; set; }
+        public DateTime? ShippedDate { get; set; }
 
-        public virtual Customer? Customer { get; set; }
+        public CustomerDto? Customer { get; set; } 
 
-        public virtual ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();
+        public ICollection<OrderItemDto> OrderItems { get; } = new List<OrderItemDto>();
 
-        public virtual Staff Staff { get; set; } = null!;
+        public StaffDto Staff { get; set; } = null!;
 
-        public virtual Store Store { get; set; } = null!;
+        public StoreDto Store { get; set; } = null!;
     }
 }

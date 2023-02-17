@@ -18,11 +18,11 @@ namespace Base.Repositories
         }
 
         public async Task<int> CreateOrderAsync(
-            int customerId,
+            int? customerId,
             byte orderStatus,
             DateTime orderDate,
             DateTime requiredDate,
-            DateTime shippedDate,
+            DateTime? shippedDate,
             int storeId,
             int staffId)
         {
@@ -45,20 +45,19 @@ namespace Base.Repositories
         {
             var item = await _context.Orders
                 .Include(i => i.Customer)
-                .Include(i => i.OrderItems)
-                .Include(i => i.OrderItems).ThenInclude(i => i.Product)
                 .Include(i => i.Store)
-                .Include(i => i.Staff).Where(w => w.OrderId == id).FirstOrDefaultAsync();
+                .Include(i => i.Staff)
+                .Include(i => i.OrderItems).ThenInclude(i => i.Product)
+                .Where(w => w.OrderId == id).FirstOrDefaultAsync();
             return item;
         }
 
         public async Task<PaginatedItem<Order>> GetOrdersByPageAsync(int pageIndex, int pageSize)
         {
             var count = await _context.Orders.LongCountAsync();
-            var content = await _context.Orders
-                .Include(i => i.Customer)
-                .Include(i => i.OrderItems)
+            var content = await _context.Orders.AsNoTracking()
                 .Include(i => i.OrderItems).ThenInclude(i => i.Product)
+                .Include(i => i.Customer)
                 .Include(i => i.Store)
                 .Include(i => i.Staff)
                 .Skip(pageIndex * pageSize)

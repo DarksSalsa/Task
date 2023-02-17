@@ -23,7 +23,7 @@ public partial class Order
 
     public virtual Customer? Customer { get; set; }
 
-    public virtual ICollection<OrderItem> OrderItems { get; } = new List<OrderItem>();
+    public virtual ICollection<OrderItem> OrderItems { get;} = new List<OrderItem>();
 
     public virtual Staff Staff { get; set; } = null!;
 

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 
+
 namespace Infrastructure.Core.Services
 {
     public static class ConfigurationSetupService

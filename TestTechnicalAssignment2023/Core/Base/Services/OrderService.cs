@@ -25,7 +25,7 @@ namespace Base.Services
             _mapper = mapper;
         }
 
-        public async Task<int> CreateOrderAsync(int customerId, byte orderStatus, DateTime orderDate, DateTime requiredDate, DateTime shippedDate, int storeId, int staffId)
+        public async Task<int> CreateOrderAsync(int? customerId, byte orderStatus, DateTime orderDate, DateTime requiredDate, DateTime? shippedDate, int storeId, int staffId)
         {
             return await ExecuteSafeAsync(async () => await _orderRepository.CreateOrderAsync(customerId, orderStatus, orderDate, requiredDate, shippedDate, storeId, staffId));
         }
