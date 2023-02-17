@@ -1,4 +1,5 @@
 version: '3.8'
+
 services:
   base.api:
     container_name: OrderStore
@@ -6,9 +7,9 @@ services:
        context: .
        dockerfile: Core/Base/Dockerfile
     environment:
-        - ASPNETCORE_URLS = http://localhost:5001
-        - PathBase = http://localhost:5001
-        - ConnectionString = Server=127.0.0.1;User Id=sa;Password=yourStrong1234567890!Password;Database=BikeStores;TrustServerCertificate=True;
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=http://+:5001
+        - ConnectionString = Server=localhost;User Id=sa;Password=yourStrong1234567890!Password;Database=BikeStores;TrustServerCertificate=True;
     depends_on:
         - db
     ports:
