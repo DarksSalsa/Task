@@ -4,13 +4,13 @@ using Infrastructure.Core.UnitTests.Mocks;
 
 namespace Infrastructure.UnitTests.Services;
 
-public class BaseDataServiceTest
+public class TransactionServiceTest
 {
     private readonly Mock<IDbContextTransaction> _dbContextTransaction;
     private readonly Mock<ILogger<MockService>> _logger;
     private readonly MockService _mockService;
 
-    public BaseDataServiceTest()
+    public TransactionServiceTest()
     {
         var dbContextWrapper = new Mock<IDbContextWrapper<MockDbContext>>();
         _dbContextTransaction = new Mock<IDbContextTransaction>();
