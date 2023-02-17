@@ -8,10 +8,10 @@ namespace Base.Repositories
 {
     public class OrderRepository : IOrderRepository
     {
-        private readonly PostgresContext _context;
+        private readonly BikeStoresContext _context;
         private readonly ILogger<OrderRepository> _logger;
 
-        public OrderRepository(IDbContextWrapper<PostgresContext> context, ILogger<OrderRepository> logger)
+        public OrderRepository(IDbContextWrapper<BikeStoresContext> context, ILogger<OrderRepository> logger)
         {
             _context = context.DbContext;
             _logger = logger;
@@ -19,10 +19,10 @@ namespace Base.Repositories
 
         public async Task<int> CreateOrderAsync(
             int customerId,
-            short orderStatus,
-            DateOnly orderDate,
-            DateOnly requiredDate,
-            DateOnly shippedDate,
+            byte orderStatus,
+            DateTime orderDate,
+            DateTime requiredDate,
+            DateTime shippedDate,
             int storeId,
             int staffId)
         {

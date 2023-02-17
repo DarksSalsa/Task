@@ -1,0 +1,5 @@
+CREATE DATABASE base;
+GO
+
+USE base;
+Go

@@ -9,13 +9,13 @@ public partial class Order
 
     public int? CustomerId { get; set; }
 
-    public short OrderStatus { get; set; }
+    public byte OrderStatus { get; set; }
 
-    public DateOnly OrderDate { get; set; }
+    public DateTime OrderDate { get; set; }
 
-    public DateOnly RequiredDate { get; set; }
+    public DateTime RequiredDate { get; set; }
 
-    public DateOnly? ShippedDate { get; set; }
+    public DateTime? ShippedDate { get; set; }
 
     public int StoreId { get; set; }
 

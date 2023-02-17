@@ -7,10 +7,10 @@ namespace Base.Repositories.Interfaces
     {
         Task<int> CreateOrderAsync(
             int customerId,
-            short orderStatus,
-            DateOnly orderDate,
-            DateOnly requiredDate,
-            DateOnly shippedDate,
+            byte orderStatus,
+            DateTime orderDate,
+            DateTime requiredDate,
+            DateTime shippedDate,
             int storeId,
             int staffId);
         Task<Order?> GetOrderByIdAsync(int id);

@@ -15,7 +15,7 @@ public partial class Staff
 
     public string? Phone { get; set; }
 
-    public short Active { get; set; }
+    public byte Active { get; set; }
 
     public int StoreId { get; set; }
 

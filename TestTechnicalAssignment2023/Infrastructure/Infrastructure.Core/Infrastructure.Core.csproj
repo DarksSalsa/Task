@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DbParams\" />
     <Folder Include="Services\Interfaces\" />
   </ItemGroup>
 

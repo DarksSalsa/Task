@@ -7,13 +7,15 @@ Link   : http://www.sqlservertutorial.net/load-sample-database/
 Version: 1.0
 --------------------------------------------------------------------
 */
+CREATE DATABASE BikeStores;
+GO
+USE BikeStores;
+GO
 -- create schemas
 CREATE SCHEMA production;
-go
-
+GO
 CREATE SCHEMA sales;
-go
-
+GO
 -- create tables
 CREATE TABLE production.categories (
 	category_id INT IDENTITY (1, 1) PRIMARY KEY,
