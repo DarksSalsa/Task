@@ -33,9 +33,6 @@ public partial class BikeStoresContext : DbContext
 
     public virtual DbSet<Store> Stores { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=127.0.0.1;User Id=sa;Password=yourStrong1234567890!Password;Database=BikeStores;TrustServerCertificate=True;");
-
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Brand>(entity =>
