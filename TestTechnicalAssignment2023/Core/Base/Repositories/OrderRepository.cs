@@ -17,7 +17,7 @@ namespace Base.Repositories
             _logger = logger;
         }
 
-        public async Task<int> CreateOrderAsync(
+        public async Task<int?> CreateOrderAsync(
             int? customerId,
             byte orderStatus,
             DateTime orderDate,

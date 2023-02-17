@@ -6,7 +6,7 @@ namespace Base.Services.Interfaces
 {
     public interface IOrderService
     {
-        Task<int> CreateOrderAsync(
+        Task<int?> CreateOrderAsync(
             int? customerId,
             byte orderStatus,
             DateTime orderDate,

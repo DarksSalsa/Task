@@ -1,0 +1,15 @@
+global using System;
+global using System.Collections.Generic;
+global using System.Threading.Tasks;
+global using AutoMapper;
+global using Base.Models;
+global using Base.Repositories.Interfaces;
+global using Base.Services;
+global using Base.Services.Interfaces;
+global using Base.Data;
+global using FluentAssertions;
+global using Infrastructure.Core.Services.Interfaces;
+global using Microsoft.EntityFrameworkCore.Storage;
+global using Microsoft.Extensions.Logging;
+global using Moq;
+global using Xunit;

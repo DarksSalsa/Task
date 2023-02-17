@@ -5,7 +5,7 @@ namespace Base.Repositories.Interfaces
 {
     public interface IOrderRepository
     {
-        Task<int> CreateOrderAsync(
+        Task<int?> CreateOrderAsync(
             int? customerId,
             byte orderStatus,
             DateTime orderDate,
