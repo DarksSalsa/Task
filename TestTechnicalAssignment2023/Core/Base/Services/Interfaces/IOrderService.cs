@@ -1,5 +1,5 @@
 ﻿using Base.Data;
-using Base.Models;
+using Base.Models.Dtos;
 using Base.Models.Responses;
 
 namespace Base.Services.Interfaces
@@ -8,14 +8,14 @@ namespace Base.Services.Interfaces
     {
         Task<int> CreateOrderAsync(
             int customerId,
-            short orderStatus,
-            DateOnly orderDate,
-            DateOnly requiredDate,
-            DateOnly shippedDate,
+            byte orderStatus,
+            DateTime orderDate,
+            DateTime requiredDate,
+            DateTime shippedDate,
             int storeId,
             int staffId);
-        Task<OrderModel?> GetOrderByIdAsync(int id);
-        Task<PaginatedItemResponse<OrderModel>> GetOrdersByPageAsync(int pageIndex, int pageSize);
+        Task<OrderDto?> GetOrderByIdAsync(int id);
+        Task<PaginatedItemResponse<OrderDto>> GetOrdersByPageAsync(int pageIndex, int pageSize);
         Task<bool> RemoveOrderAsync(int id);
     }
 }

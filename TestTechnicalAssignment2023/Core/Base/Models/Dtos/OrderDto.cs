@@ -1,8 +1,8 @@
 ﻿using Base.Entities;
 
-namespace Base.Models
+namespace Base.Models.Dtos
 {
-    public class OrderModel
+    public class OrderDto
     {
         public int OrderId { get; set; }
 
